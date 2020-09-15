@@ -3,7 +3,8 @@ class Box {
       var options = {
           'restitution':2,
           'friction':0.3,
-          'density':1.0
+          'density':1.0,
+          'isStatic':true
       }
       this.body = Bodies.rectangle(x, y, width, height, options);
       this.width = width;
@@ -18,7 +19,7 @@ class Box {
       translate(pos.x,pos.y);
       rotate(angle);
       rectMode(CENTER);
-      fill(255);
+      fill("red");
       rect(0, 0, this.width, this.height);
       pop()
     }
